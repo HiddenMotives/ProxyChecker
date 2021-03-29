@@ -17,7 +17,7 @@
          <children>
             <ImageView fitHeight="127.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets/icon.png" />
+                  <Image url="@co/proxychecker/ProxyChecker/assets/icon.png" />
                </image>
                <effect>
                   <Reflection />

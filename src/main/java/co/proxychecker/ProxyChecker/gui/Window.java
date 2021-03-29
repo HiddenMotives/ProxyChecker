@@ -7,6 +7,9 @@ import javafx.stage.Modality;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.StageStyle;
 
+import java.io.File;
+import java.io.FileInputStream;
+
 
 /**
  * Creates a Window
@@ -25,7 +28,7 @@ public class Window {
             stage.initStyle(StageStyle.DECORATED);
             stage.setTitle(title);
             stage.getIcons().add(
-                    new Image(Window.class.getResourceAsStream("/co/proxychecker/ProxyChecker/assets/icon.png"))
+                    new Image( new FileInputStream( new File("C:\\Users\\User\\IdeaProjects\\ProxyChecker_gui\\src\\main\\java\\co\\proxychecker\\ProxyChecker\\assets\\icon.png").getAbsolutePath()))
             );
             stage.setResizable(false);
             stage.setScene(new Scene(fxmlLoader.load()));

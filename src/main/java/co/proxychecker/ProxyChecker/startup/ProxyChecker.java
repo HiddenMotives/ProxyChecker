@@ -1,8 +1,11 @@
 package co.proxychecker.ProxyChecker.startup;
 
 import java.awt.*;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 
 import javax.imageio.ImageIO;
 
@@ -76,11 +79,13 @@ public class ProxyChecker extends Application {
 
             FXMLLoader fxmlLoader = new FXMLLoader();
             VBox root = fxmlLoader.load(
-                    getClass().getResourceAsStream("/co/proxychecker/ProxyChecker/gui/ProxyChecker.fxml")
+//                    getClass().getResourceAsStream("/co/proxychecker/ProxyChecker/gui/ProxyChecker.fxml")
+//                    new FileInputStream( new File("C:\\Users\\User\\IdeaProjects\\ProxyChecker_gui\\src\\main\\java\\co\\proxychecker\\ProxyChecker\\gui\\ProxyChecker.fxml").getAbsolutePath())
+                    new FileInputStream( new File("C:\\Users\\User\\IdeaProjects\\ProxyChecker_gui\\src\\main\\java\\co\\proxychecker\\ProxyChecker\\gui\\ProxyChecker.fxml").getAbsolutePath())
             );
             Scene scene = new Scene(root);
             primaryStage.getIcons().add(new Image(
-                    getClass().getResourceAsStream("/co/proxychecker/ProxyChecker/assets/icon.png"))
+                    new FileInputStream( new File("C:\\Users\\User\\IdeaProjects\\ProxyChecker_gui\\src\\main\\java\\co\\proxychecker\\ProxyChecker\\assets\\icon.png").getAbsolutePath()))
             );
             primaryStage.setScene(scene);
             primaryStage.setTitle(Settings.getApplicationName());

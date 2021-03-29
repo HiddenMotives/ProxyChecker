@@ -3,7 +3,6 @@ package co.proxychecker.ProxyChecker.gui.controllers;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -30,8 +29,6 @@ import co.proxychecker.ProxyChecker.commands.ProxyCheckCommand;
 import co.proxychecker.ProxyChecker.components.entities.ProxyStatus;
 import co.proxychecker.ProxyChecker.gui.events.ProxyCheckerKeyEvent;
 import co.proxychecker.ProxyChecker.components.entities.ProxyAnonymity;
-import javafx.scene.paint.Color;
-import javafx.util.Callback;
 import javafx.util.Pair;
 
 /**
@@ -245,13 +242,14 @@ public class ProxyCheckerController implements Initializable {
                 case "preferences":
                     Window.show(item_id.substring(0, 1).toUpperCase() + item_id.substring(1),
                             new FXMLLoader(
-                                    getClass().getResource("/co/proxychecker/ProxyChecker/gui/Settings.fxml")
+//                                    getClass().getResource("/co/proxychecker/ProxyChecker/gui/Settings.fxml")
+                                    getClass().getResource("/Settings.fxml")
                             ));
                     break;
                 case "about":
                     Window.show(item_id.substring(0, 1).toUpperCase() + item_id.substring(1),
                             new FXMLLoader(
-                                    getClass().getResource("/co/proxychecker/ProxyChecker/gui/About.fxml")
+                                    getClass().getResource("/About.fxml")
                             ));
                     break;
                 case "quit":

@@ -16,7 +16,7 @@ public class UserSettings {
     private int timeout; // timeout for checking the proxy
     private int threads; // max threads
     private String ip = "0.0.0.0"; // ip address of the user
-    private Proxy.Type type = java.net.Proxy.Type.HTTP;
+    private Proxy.Type type = Proxy.Type.HTTP;
 
     private List<Pair<ProxyAnonymity, String>> colorScheme = new ArrayList<>();
 
